@@ -1,0 +1,86 @@
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh;
+  width:100vw;
+  background-color: #444;
+}
+
+.main {
+  height:100vh;
+  background-color:#222;
+  max-width: 100%;
+}
+
+.callpost {
+  padding:2rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height:100%;
+}
+
+.main-page-container {
+  margin-top:76px;
+}
+
+.detail-page-container {
+  margin-top:76px;
+}
+
+figure {
+  /* -webkit-transition: all 0.8s ease-in-out; */
+  -moz-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  background-position: center center;
+  background-size: cover;
+}
+
+.no-gutter [class*='col-'] {
+  padding-right: 0;   
+  padding-left: 0;
+}
+
+.page1Container {
+  -webkit-transition: all ease-in 0.5s;
+  transition: all ease-in 0.5s;
+  display: inline-block;
+  width:100%;
+}
+
+.main-loading-spinner {
+transition: all 200ms ease-in-out;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+/* default .loading styles, .loading should be invisible, opacity: 0, z-index: -1 */
+.loading {
+  opacity: 0;
+  transition: all .5s ease-in-out;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+/* .loading screen is visible when app is not bootstraped yet, .my-app is empty */
+my-app:empty + .loading {
+  opacity: 1;
+  z-index: 100;
+  background: #444;
+}
+
+@media all and (max-width: 500px) {
+  .main-loading-spinner{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+}

@@ -1,0 +1,23 @@
+.InputForm {
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 4rem;
+        color:white;
+        text-align: center;
+    }
+
+    &__input {
+        color:white;
+    }
+
+    &__form-container {
+        color: white;
+    }
+}
