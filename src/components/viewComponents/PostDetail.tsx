@@ -8,32 +8,30 @@ import Post from '../post/Post'
 //Stylesheets
 import "../../stylesheets/main.scss";
 
-export default class IndexPage extends React.Component<IndexPageProps, IMainpageState> {
+export default class IndexPage extends React.Component<IPostDetailProps, IPostDetailState> {
 
     constructor() {
         super();
         this.state = {
-            loadingPosts: true,
-            posts: [],
-            error: "",
+            loadingPost: true,
+            post: null,
+            error: ""
         }
     }
-
     componentWillMount() {
-        //do cookie heck for json token here
-        //if json token then set signedin state
+        //do cookie check here 
     }
 
     componentDidMount() {
-        this.getPosts();
+        this.getPostDetail();
     }
 
-    getPosts() {
+    getPostDetail() {
         fetch('my post url')
-        .then(posts => posts.json())
-        .then((posts: IPost[]) => {
+        .then(post => post.json())
+        .then((post: IPost) => {
             this.setState({
-                posts: posts
+                post: post
             })
         })
         .catch((error) => {
@@ -46,7 +44,8 @@ export default class IndexPage extends React.Component<IndexPageProps, IMainpage
     render() {
         return <div className="MainPage">
             <Header/>
-            {this.state.posts}
+            <h1>This is the post detail page!!</h1>
+            {this.state.post}
         </div>
     }
 
