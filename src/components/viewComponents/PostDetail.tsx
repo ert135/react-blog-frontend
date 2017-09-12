@@ -18,8 +18,9 @@ export default class IndexPage extends React.Component<IPostDetailProps, IPostDe
             error: ""
         }
     }
+
     componentWillMount() {
-        //do cookie check here 
+        //do local storage check here 
     }
 
     componentDidMount() {
@@ -27,18 +28,7 @@ export default class IndexPage extends React.Component<IPostDetailProps, IPostDe
     }
 
     getPostDetail() {
-        fetch('my post url')
-        .then(post => post.json())
-        .then((post: IPost) => {
-            this.setState({
-                post: post
-            })
-        })
-        .catch((error) => {
-            this.setState({
-                error: error
-            })
-        })
+        //call redux store here
     }
 
     render() {

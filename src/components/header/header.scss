@@ -1,4 +1,4 @@
-.main-header{
+.main-header {
     height:8%;
     width:100%;
     background-color: #222;
@@ -8,6 +8,7 @@
     position:fixed;
     z-index: 100;
     transition: all 100ms;
+    
     @media (max-width: 800px) { 
         justify-content: center;
         font-size:4rem;
@@ -20,11 +21,11 @@
 
     }
 
-    &__user-dropdown{
+    &__user-dropdown {
         display: flex;
     }
 
-    &__title{
+    &__title {
         color: #eaeaea;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 3rem;
@@ -37,7 +38,7 @@
         }
     }
 
-    &__link{
+    &__link {
         color: #eaeaea;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 3rem;
@@ -46,7 +47,7 @@
         margin-right:1rem;
     }
 
-    &__links{
+    &__links {
         display:flex;
         list-style-type: none;
         margin:0;
@@ -69,7 +70,7 @@
         }  
     }
 
-    &__user-buttons-container{
+    &__user-buttons-container {
         color:#a0a0a0;
         margin-left:auto;
         cursor: pointer;
@@ -80,7 +81,7 @@
         }
     }
 
-    &__login-button{
+    &__login-button {
         color:#a0a0a0;
         cursor: pointer;
         margin-right:2rem;
@@ -93,7 +94,7 @@
         }
     }
 
-    &__name-label{
+    &__name-label {
         margin-right:1rem;
         color:#a0a0a0;
         text-align: center;
@@ -105,7 +106,7 @@
         }  
     }
 
-    &__logout-button{
+    &__logout-button {
         color:#a0a0a0;
         cursor: pointer;
         margin-right:2rem;
@@ -193,18 +194,17 @@ figure {
 }
 
 /* .loading screen is visible when app is not bootstraped yet, .my-app is empty */
-my-app:empty + .loading {
+#app:empty + .loading {
     opacity: 1;
     z-index: 100;
     background: #444;
 }
 
 @media all and (max-width: 500px) {
-    .main-loading-spinner{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    .main-loading-spinner {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-
 }

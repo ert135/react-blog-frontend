@@ -3909,7 +3909,7 @@ exports = module.exports = __webpack_require__(21)(undefined);
 
 
 // module
-exports.push([module.i, ".main-header {\n  height: 8%;\n  width: 100%;\n  background-color: #222;\n  padding: 2rem;\n  display: flex;\n  align-items: center;\n  position: fixed;\n  z-index: 100;\n  transition: all 100ms; }\n  @media (max-width: 800px) {\n    .main-header {\n      justify-content: center;\n      font-size: 4rem; } }\n  @media (min-width: 800px) {\n    .main-header__menu-button-mobile {\n      display: none; } }\n  .main-header__user-dropdown {\n    display: flex; }\n  .main-header__title {\n    color: #eaeaea;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 3rem;\n    margin: 0;\n    white-space: nowrap;\n    cursor: pointer; }\n    @media (max-width: 800px) {\n      .main-header__title {\n        justify-content: center;\n        align-self: center; } }\n  .main-header__link {\n    color: #eaeaea;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 3rem;\n    margin: 0;\n    margin-left: 1rem;\n    margin-right: 1rem; }\n  .main-header__links {\n    display: flex;\n    list-style-type: none;\n    margin: 0;\n    align-items: center; }\n    @media (max-width: 800px) {\n      .main-header__links {\n        display: none; } }\n  .main-header__link-item {\n    padding: 1rem;\n    color: #a0a0a0;\n    font-size: 1.5rem;\n    line-height: 1rem;\n    text-align: center;\n    cursor: pointer;\n    transition: all 300ms; }\n    .main-header__link-item:hover {\n      color: white; }\n  .main-header__user-buttons-container {\n    color: #a0a0a0;\n    margin-left: auto;\n    cursor: pointer;\n    margin-right: 2rem;\n    display: flex; }\n    @media (max-width: 800px) {\n      .main-header__user-buttons-container {\n        display: none; } }\n  .main-header__login-button {\n    color: #a0a0a0;\n    cursor: pointer;\n    margin-right: 2rem;\n    transition: all 300ms; }\n    .main-header__login-button:hover {\n      color: white; }\n    @media (max-width: 800px) {\n      .main-header__login-button {\n        display: none; } }\n  .main-header__name-label {\n    margin-right: 1rem;\n    color: #a0a0a0;\n    text-align: center;\n    cursor: pointer;\n    transition: all 300ms;\n    text-decoration: none; }\n    .main-header__name-label:hover {\n      color: white; }\n  .main-header__logout-button {\n    color: #a0a0a0;\n    cursor: pointer;\n    margin-right: 2rem;\n    transition: all 300ms; }\n    .main-header__logout-button:hover {\n      color: white; }\n    @media (max-width: 800px) {\n      .main-header__logout-button {\n        display: none; } }\n  .main-header__mobile-nav {\n    display: none; }\n    @media (max-width: 800px) {\n      .main-header__mobile-nav {\n        display: block; } }\n\n.main {\n  height: 100vh;\n  background-color: #222;\n  max-width: 100%; }\n\n.callpost {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  height: 100%; }\n\n.main-page-container {\n  margin-top: 76px; }\n\n.detail-page-container {\n  margin-top: 76px; }\n\nfigure {\n  /* -webkit-transition: all 0.8s ease-in-out; */\n  -moz-transition: all 0.8s ease-in-out;\n  -o-transition: all 0.8s ease-in-out;\n  transition: all 0.8s ease-in-out;\n  background-position: center center;\n  background-size: cover; }\n\n.no-gutter [class*='col-'] {\n  padding-right: 0;\n  padding-left: 0; }\n\n.page1Container {\n  -webkit-transition: all ease-in 0.5s;\n  transition: all ease-in 0.5s;\n  display: inline-block;\n  width: 100%; }\n\n.main-loading-spinner {\n  transition: all 200ms ease-in-out;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n/* default .loading styles, .loading should be invisible, opacity: 0, z-index: -1 */\n.loading {\n  opacity: 0;\n  transition: all .5s ease-in-out;\n  position: fixed;\n  height: 100%;\n  width: 100%;\n  top: 0;\n  left: 0;\n  z-index: -1; }\n\n/* .loading screen is visible when app is not bootstraped yet, .my-app is empty */\nmy-app:empty + .loading {\n  opacity: 1;\n  z-index: 100;\n  background: #444; }\n\n@media all and (max-width: 500px) {\n  .main-loading-spinner {\n    position: absolute;\n    top: 20%;\n    left: 50%;\n    transform: translate(-50%, -50%); } }\n", ""]);
+exports.push([module.i, ".main-header {\n  height: 8%;\n  width: 100%;\n  background-color: #222;\n  padding: 2rem;\n  display: flex;\n  align-items: center;\n  position: fixed;\n  z-index: 100;\n  transition: all 100ms; }\n  @media (max-width: 800px) {\n    .main-header {\n      justify-content: center;\n      font-size: 4rem; } }\n  @media (min-width: 800px) {\n    .main-header__menu-button-mobile {\n      display: none; } }\n  .main-header__user-dropdown {\n    display: flex; }\n  .main-header__title {\n    color: #eaeaea;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 3rem;\n    margin: 0;\n    white-space: nowrap;\n    cursor: pointer; }\n    @media (max-width: 800px) {\n      .main-header__title {\n        justify-content: center;\n        align-self: center; } }\n  .main-header__link {\n    color: #eaeaea;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 3rem;\n    margin: 0;\n    margin-left: 1rem;\n    margin-right: 1rem; }\n  .main-header__links {\n    display: flex;\n    list-style-type: none;\n    margin: 0;\n    align-items: center; }\n    @media (max-width: 800px) {\n      .main-header__links {\n        display: none; } }\n  .main-header__link-item {\n    padding: 1rem;\n    color: #a0a0a0;\n    font-size: 1.5rem;\n    line-height: 1rem;\n    text-align: center;\n    cursor: pointer;\n    transition: all 300ms; }\n    .main-header__link-item:hover {\n      color: white; }\n  .main-header__user-buttons-container {\n    color: #a0a0a0;\n    margin-left: auto;\n    cursor: pointer;\n    margin-right: 2rem;\n    display: flex; }\n    @media (max-width: 800px) {\n      .main-header__user-buttons-container {\n        display: none; } }\n  .main-header__login-button {\n    color: #a0a0a0;\n    cursor: pointer;\n    margin-right: 2rem;\n    transition: all 300ms; }\n    .main-header__login-button:hover {\n      color: white; }\n    @media (max-width: 800px) {\n      .main-header__login-button {\n        display: none; } }\n  .main-header__name-label {\n    margin-right: 1rem;\n    color: #a0a0a0;\n    text-align: center;\n    cursor: pointer;\n    transition: all 300ms;\n    text-decoration: none; }\n    .main-header__name-label:hover {\n      color: white; }\n  .main-header__logout-button {\n    color: #a0a0a0;\n    cursor: pointer;\n    margin-right: 2rem;\n    transition: all 300ms; }\n    .main-header__logout-button:hover {\n      color: white; }\n    @media (max-width: 800px) {\n      .main-header__logout-button {\n        display: none; } }\n  .main-header__mobile-nav {\n    display: none; }\n    @media (max-width: 800px) {\n      .main-header__mobile-nav {\n        display: block; } }\n\n.main {\n  height: 100vh;\n  background-color: #222;\n  max-width: 100%; }\n\n.callpost {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  height: 100%; }\n\n.main-page-container {\n  margin-top: 76px; }\n\n.detail-page-container {\n  margin-top: 76px; }\n\nfigure {\n  /* -webkit-transition: all 0.8s ease-in-out; */\n  -moz-transition: all 0.8s ease-in-out;\n  -o-transition: all 0.8s ease-in-out;\n  transition: all 0.8s ease-in-out;\n  background-position: center center;\n  background-size: cover; }\n\n.no-gutter [class*='col-'] {\n  padding-right: 0;\n  padding-left: 0; }\n\n.page1Container {\n  -webkit-transition: all ease-in 0.5s;\n  transition: all ease-in 0.5s;\n  display: inline-block;\n  width: 100%; }\n\n.main-loading-spinner {\n  transition: all 200ms ease-in-out;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n/* default .loading styles, .loading should be invisible, opacity: 0, z-index: -1 */\n.loading {\n  opacity: 0;\n  transition: all .5s ease-in-out;\n  position: fixed;\n  height: 100%;\n  width: 100%;\n  top: 0;\n  left: 0;\n  z-index: -1; }\n\n/* .loading screen is visible when app is not bootstraped yet, .my-app is empty */\n#app:empty + .loading {\n  opacity: 1;\n  z-index: 100;\n  background: #444; }\n\n@media all and (max-width: 500px) {\n  .main-loading-spinner {\n    position: absolute;\n    top: 20%;\n    left: 50%;\n    transform: translate(-50%, -50%); } }\n", ""]);
 
 // exports
 
@@ -3963,13 +3963,12 @@ var Header = /** @class */ (function (_super) {
     };
     Header.prototype.render = function () {
         return (React.createElement("div", { className: "main-header" },
-            React.createElement("div", { className: "main-header" },
-                React.createElement("h1", { className: "main-header__title" }, " Robert Smith "),
-                React.createElement("ul", { className: "main-header__links" },
-                    React.createElement("li", { className: "main-header__link-item" }, "Projects"),
-                    React.createElement("li", { className: "main-header__link-item" }, "Posts")),
-                React.createElement("div", { className: "main-header__user-buttons-container" }, "Log In"),
-                React.createElement("div", { className: "main-header__user-dropdown" }))));
+            React.createElement("h1", { className: "main-header__title" }, " Robert Smith "),
+            React.createElement("ul", { className: "main-header__links" },
+                React.createElement("li", { className: "main-header__link-item" }, "Projects"),
+                React.createElement("li", { className: "main-header__link-item" }, "Posts")),
+            React.createElement("div", { className: "main-header__user-buttons-container" }, "Log In"),
+            React.createElement("div", { className: "main-header__user-dropdown" })));
     };
     return Header;
 }(React.Component));
@@ -8765,25 +8764,13 @@ var IndexPage = /** @class */ (function (_super) {
         return _this;
     }
     IndexPage.prototype.componentWillMount = function () {
-        //do cookie check here 
+        //do local storage check here 
     };
     IndexPage.prototype.componentDidMount = function () {
         this.getPostDetail();
     };
     IndexPage.prototype.getPostDetail = function () {
-        var _this = this;
-        fetch('my post url')
-            .then(function (post) { return post.json(); })
-            .then(function (post) {
-            _this.setState({
-                post: post
-            });
-        })
-            .catch(function (error) {
-            _this.setState({
-                error: error
-            });
-        });
+        //call redux store here
     };
     IndexPage.prototype.render = function () {
         return React.createElement("div", { className: "MainPage" },
