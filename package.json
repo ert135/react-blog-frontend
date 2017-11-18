@@ -6,9 +6,8 @@
     "start": "webpack-dev-server && npm run lint:watch && npm run test:watch",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
-    "start-dev-server": "webpack-dev-server --port=3000",
     "test": "mocha --reporter progress test/setup.js \"test/**/*.test.js\"",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "mocha --watch"
   },
   "author": "Cory House",
   "license": "MIT",
