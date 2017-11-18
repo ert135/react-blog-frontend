@@ -1,0 +1,9 @@
+//using this so I can write tests in es2016
+{
+    "presets": ["react", "es2015"],
+    "env": {
+      "development": {
+        "presets": ["react-hmre"]
+      }
+    }
+}
