@@ -9,7 +9,7 @@
     "test": "mocha --reporter progress test/setup.js \"test/**/*.test.js\"",
     "test:watch": "mocha --watch"
   },
-  "author": "Cory House",
+  "author": "Robert Smith",
   "license": "MIT",
   "dependencies": {
     "@types/material-ui": "^0.18.4",
