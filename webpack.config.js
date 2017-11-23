@@ -9,7 +9,7 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
   devtool: 'inline-source-map',
   entry: {
-     app: path.resolve(__dirname, 'src/main.ts'),
+     app: path.resolve(__dirname, 'src/index.ts'),
      vendor: path.resolve(__dirname, 'src/vendor.ts')
   },
   target: 'web',

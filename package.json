@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal blog",
   "scripts": {
-    "start": "webpack-dev-server && npm run lint:watch && npm run test:watch",
+    "start": "webpack-dev-server & npm run lint:watch & npm run test:watch",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
     "test": "mocha --reporter progress test/setup.js \"test/**/*.test.js\"",
@@ -12,11 +12,13 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
+    "@types/material-ui": "^0.18.4",
     "@types/react": "^16.0.25",
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
     "express-static-gzip": "^0.3.0",
     "jquery": "2.2.3",
+    "material-ui": "^0.19.4",
     "react": "15.0.2",
     "react-dom": "15.0.2",
     "react-redux": "4.4.5",
