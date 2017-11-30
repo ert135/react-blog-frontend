@@ -8,7 +8,7 @@ import AppBar from 'material-ui/AppBar';
 
 export default class App extends React.Component<any, any> {
 
-    constructor(props: any){
+    constructor(props: any) {
         super(props);
     }
 
