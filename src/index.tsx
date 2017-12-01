@@ -11,6 +11,8 @@ import reducers from './reducers/index';
 
 import routes from './routes';
 
+console.log('Routes are ', routes);
+
 const store = createStore(reducers);
 
 ReactDOM.render(

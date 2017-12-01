@@ -24,7 +24,7 @@ module.exports = {
     port: 3000
   },
   resolve: {
-    extensions: ['.ts', '.js', '.json']
+    extensions: ['.tsx', '.ts', '.js', '.json']
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
