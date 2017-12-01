@@ -5,7 +5,7 @@ export default (state: any = [], action: any) => {
         case 'CREATE_POST':
             return [
                 ...state.posts,
-                Object.assign({}, action.post)
+                (<any>Object).assign({}, action.post)
             ];
             default:
                 return state;
