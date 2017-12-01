@@ -23,6 +23,9 @@ module.exports = {
     publicPath: "/dist",
     port: 3000
   },
+  resolve: {
+    extensions: ['.ts', '.js', '.json']
+  },
   plugins: [
     new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin("styles.css"),
