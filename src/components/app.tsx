@@ -16,7 +16,6 @@ export default class App extends React.Component<any, any> {
         return (
             <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
                 <AppBar title="Robert Smith"/>
-                {this.props.children}
             </MuiThemeProvider>
         );
     }
