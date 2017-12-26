@@ -20,7 +20,10 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'src'),
-    publicPath: "/dist",
+    publicPath: "/",
+    historyApiFallback: {
+      index: 'index.html'
+    },
     port: 3000
   },
   resolve: {

@@ -6,20 +6,18 @@ import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import { Router, Route, BrowserRouter } from 'react-router-dom'
 import { routerReducer } from 'react-router-redux'
+//do a defaulkt state import
 
 import reducers from './reducers/index';
-import routes from './routes';
-
 import App from './components/app';
 
 import './styles/main.scss';
 
 console.log('Reducers are ', reducers);
-console.log('Routes are ', routes);
 
-const store = createStore(reducers);
+const store = createStore(reducers, { navOpen: false });
 
-console.log('store is ', store);
+console.log('store is ', store.getState());
 
 ReactDOM.render(
 	<Provider store={store}>

@@ -25,7 +25,7 @@ export default class MainPage extends React.Component<any, any> {
     public render() {
         return (
             <div>
-                <h1>Hello from the main-page { this.state.name }!</h1>
+                <h1 className='testTitle'>Hello from the main-page { this.state.name }!</h1>
                 <h2>Posts are</h2>
                 {this.renderPosts()}
             </div>
