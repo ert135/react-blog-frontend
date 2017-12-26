@@ -6,7 +6,7 @@ export default class MainPage extends React.Component<any, any> {
 
     constructor(props: any){
         super(props);
-        this.state = { 
+        this.state = {
             name: this.props.defaultName,
             posts: this.props.posts || []
         };
@@ -15,7 +15,7 @@ export default class MainPage extends React.Component<any, any> {
     private renderPosts() {
         if (this.state.posts) {
             this.state.posts.map((post: any) => {
-                <div className='post'> 
+                <div className='post'>
                     {post}
                 </div>
             });

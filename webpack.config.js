@@ -54,25 +54,3 @@ module.exports = {
     ]
   }
 };
-
-
-
-// loaders: [
-//   {test: /\.tsx?$/, exclude: /node_modules/, loader: "awesome-typescript-loader"},
-//   {enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-//   {
-//     test: /\.scss$/,
-//     use: [{
-//         loader: "style-loader" // creates style nodes from JS strings
-//     }, {
-//         loader: "css-loader" // translates CSS into CommonJS
-//     }, {
-//         loader: "sass-loader" // compiles Sass to CSS
-//     }]
-//   },
-//   {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
-//   {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
-//   {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
-//   {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}
-// ]
-// }

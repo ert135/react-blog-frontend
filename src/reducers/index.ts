@@ -3,5 +3,5 @@ import { combineReducers } from 'redux';
 import posts from './postReducers'
 
 export default combineReducers({
-    books: posts
+    posts: posts
 });
