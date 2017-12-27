@@ -5,7 +5,19 @@ export default (state: any = [], action: any) => {
                 ...state.posts,
                 (<any>Object).assign({}, action.post)
             ];
-            default:
-                return state;
+        case 'REQUEST_POSTS':
+            return (<any>Object).assign({}, state, {
+                isFetching: true,
+                hasError: false
+            });
+        case 'RECEIVE_POSTS':
+            return (<any>Object).assign({}, state, {
+                isFetching: false,
+                hasError: false,
+                items: action.posts,
+                lastUpdated: action.receivedAt
+            });
+        default:
+            return state;
     }
 };

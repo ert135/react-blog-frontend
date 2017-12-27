@@ -6,7 +6,7 @@ import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import { Router, Route, BrowserRouter } from 'react-router-dom'
 import { routerReducer } from 'react-router-redux'
-//do a defaulkt state import
+//do a import for initial application state
 
 import reducers from './reducers/index';
 import App from './components/app';
@@ -15,7 +15,7 @@ import './styles/main.scss';
 
 console.log('Reducers are ', reducers);
 
-const store = createStore(reducers, { navOpen: false });
+const store = createStore(reducers, { navOpen: false, posts: [] });
 
 console.log('store is ', store.getState());
 

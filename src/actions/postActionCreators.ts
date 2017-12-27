@@ -6,3 +6,9 @@ export function postExampleAction(text: string) {
         text: text
     }
 }
+
+export function requestPosts() {
+    return {
+        type: 'PREQUEST_POSTS'
+    }
+}
