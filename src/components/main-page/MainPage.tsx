@@ -1,11 +1,15 @@
 import * as React from 'react';
-import * as router from 'react-router';
 import axios from 'axios';
+import config from '../../../config/config';
+
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+  } from 'react-router-dom'
 
 export default class MainPage extends React.Component<any, any> {
-    private listItems: any;
-
-    constructor(props: any){
+    constructor(props: any) {
         super(props);
         this.state = {
             name: this.props.defaultName,
@@ -15,9 +19,8 @@ export default class MainPage extends React.Component<any, any> {
     }
 
     private getPosts(): void {
-        axios.get('http://35.176.44.151:8080/posts')
+        axios.get(config.apiEndpoint + 'posts')
         .then((response: any) => {
-            console.log('data is ', response.data);
             this.setState({
                 posts: response.data
             });
@@ -27,7 +30,9 @@ export default class MainPage extends React.Component<any, any> {
     private renderPosts() {
         if (this.state.posts) {
             return this.state.posts.map((post: any, i: number) => {
-               return <h2 className="testTitle" key={i}>{post.title}</h2>
+               return <h2 className="testTitle" key={i}>{post.title}
+                <Link to="/posts">{post.title}</Link>
+               </h2>
             });
         }
     }
