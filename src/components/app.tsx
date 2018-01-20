@@ -6,6 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 import * as Login from './login';
+import Header from './header/header'
 
 import Main from './main';
 
@@ -19,7 +20,7 @@ export default class App extends React.Component<any, any> {
     public componentDidMount(): void {
         this.setState({
             logged: false
-        })
+        });
     }
 
     private getTokenFromLocalStorage(): void {
@@ -34,13 +35,8 @@ export default class App extends React.Component<any, any> {
     public render() {
         console.log('state here is ', this.state);
         return (
-            <div>
-                <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-                    <AppBar
-                        title="Robert Smith"
-                        iconElementRight={<Login.Login/>}
-                    />
-                </MuiThemeProvider>
+            <div className='wrapper'>
+                <Header></Header>
                 <Main></Main>
             </div>
         );
