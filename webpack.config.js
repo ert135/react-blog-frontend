@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
+var url
 
 const extractSass = new ExtractTextPlugin({
   filename: "[name].[contenthash].css"
@@ -42,12 +43,24 @@ module.exports = {
       {enforce: "pre", test: /\.js$/, loader: "source-map-loader"},
       {
         test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [{
+            loader: 'css-loader',
+            options: { url: true }
+          }, {
+            loader: 'sass-loader'
+          }]
+        })
+      },
+      {
+        test: /\.(png|svg)$/,
+        exclude: /node_modules/,
         use: [{
-            loader: "style-loader" // creates style nodes from JS strings
-        }, {
-            loader: "css-loader" // translates CSS into CommonJS
-        }, {
-            loader: "sass-loader" // compiles Sass to CSS
+          loader: 'file-loader?name=img/[name].[ext]',
+          options: {
+            emitFile: false
+          }
         }]
       },
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},

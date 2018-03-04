@@ -8,7 +8,7 @@ import AppBar from 'material-ui/AppBar';
 import * as Login from './login';
 import Header from './header/header'
 
-import Main from './main';
+import Routes from './routes';
 
 export default class App extends React.Component<any, any> {
 
@@ -37,7 +37,7 @@ export default class App extends React.Component<any, any> {
         return (
             <div className='wrapper'>
                 <Header></Header>
-                <Main></Main>
+                <Routes></Routes>
             </div>
         );
     }

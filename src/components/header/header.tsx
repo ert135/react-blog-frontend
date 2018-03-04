@@ -16,7 +16,7 @@ export default class Header extends React.Component<any, any> {
                     <strong className='header__strong'>Robert Smith</strong>
                 </a>
                 <nav className='header__nav'>
-                    <a href="#menu">Menu</a>
+                    <a href="#menu"></a>
                 </nav>
             </header>
         );

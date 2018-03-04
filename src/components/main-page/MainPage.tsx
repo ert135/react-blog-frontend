@@ -1,6 +1,6 @@
 import * as React from 'react';
-import axios from 'axios';
 import config from '../../../config/config';
+import HeroBanner from '../hero-banner/HeroBanner'
 
 import {
     BrowserRouter as Router,
@@ -19,19 +19,22 @@ export default class MainPage extends React.Component<any, any> {
     }
 
     private getPosts(): void {
-        axios.get(config.apiEndpoint + 'posts')
-        .then((response: any) => {
-            this.setState({
-                posts: response.data
-            });
-        })
+        fetch(config.apiEndpoint + 'posts')
+            .then(response => response.json())
+            .then((response: any) => {
+                console.log('response is ', response);
+                this.setState({
+                    posts: response.posts
+                });
+            })
     }
 
     private renderPosts() {
         if (this.state.posts) {
             return this.state.posts.map((post: any, i: number) => {
-               return <h2 className="testTitle" key={i}>{post.title}
-                <Link to="/posts">{post.title}</Link>
+               return <h2 className="testTitle" key={i}>
+                    {/* { post.title } */}
+                    {/* <Link to="/posts">{post.title}</Link> */}
                </h2>
             });
         }
@@ -40,8 +43,7 @@ export default class MainPage extends React.Component<any, any> {
     public render() {
         return (
             <div>
-                <h1 className='testTitle'>Hello from the main-page { this.state.name }!</h1>
-                {this.renderPosts()}
+                <HeroBanner></HeroBanner>
             </div>
         );
     }

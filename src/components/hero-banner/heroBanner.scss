@@ -1,0 +1,82 @@
+$bg-img: url('../../resources/herobackground.png');
+
+@keyframes background-animator{
+    0%,to{
+        background-position: 50px,50px
+    }
+    50%{
+        background-position: -50px,-50px
+    }
+}
+
+.banner {
+    align-items: center;
+    display: flex;
+    border-bottom: 0;
+    -webkit-transition: 1.9s opacity cubic-bezier(.25,1,.25,1);
+    transition: 1.9s opacity cubic-bezier(.25,1,.25,1);
+    background: -webkit-linear-gradient(bottom,#2d4861 0%,#2b394e 100%);
+    background: linear-gradient(to top,#2d4861 0%,#2b394e 100%);
+    cursor: default;
+    height: 60vh;
+    margin-bottom: -3.25em;
+    max-height: 32em;
+    min-height: 22em;
+    position: relative;
+    top: -3.25em;
+    height: 75vh;
+    min-height: 30em;
+    max-height: 50em;
+
+    &:before {
+        content: "";
+        background: #182d47 $bg-img center center no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        bottom: -50px;
+        right: -50px;
+        z-index: 1;
+        animation-name: background-animator;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    &:after {
+        box-shadow: inset 0 0 25vmin 0 #1b2c44;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+    }
+
+
+    &__inner {
+        -moz-transition: opacity 1.5s ease, -moz-transform 0.5s ease-out, -moz-filter 0.5s ease, -webkit-filter 0.5s ease;
+        -webkit-transition: opacity 1.5s ease, -webkit-transform 0.5s ease-out, -webkit-filter 0.5s ease, -webkit-filter 0.5s ease;
+        -ms-transition: opacity 1.5s ease, -ms-transform 0.5s ease-out, -ms-filter 0.5s ease, -webkit-filter 0.5s ease;
+        transition: opacity 1.5s ease, transform 0.5s ease-out, filter 0.5s ease, -webkit-filter 0.5s ease;
+        padding: 0 !important;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        margin: auto;
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .banner {
+        height: 20rem;
+        margin-bottom: -2.75em;
+        max-height: none;
+        min-height: 0;
+        top: -3.75em;
+    }
+}
