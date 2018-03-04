@@ -47,7 +47,7 @@ module.exports = {
           fallback: 'style-loader',
           use: [{
             loader: 'css-loader',
-            options: { url: true }
+            options: { url: false }
           }, {
             loader: 'sass-loader'
           }]
@@ -61,7 +61,7 @@ module.exports = {
           options: {
             emitFile: false
           }
-        }]
+         }]
       },
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
       {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
