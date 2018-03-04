@@ -1,13 +1,16 @@
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CompressionPlugin = require("compression-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
   filename: "[name].[contenthash].css"
 });
 
 module.exports = {
-  devtool: 'inline-source-map',
+  devtool: 'cheap-module-source-map',
   entry: {
      app: path.resolve(__dirname, 'src/index.tsx'),
      vendor: path.resolve(__dirname, 'src/vendor.ts')
@@ -32,9 +35,19 @@ module.exports = {
   plugins: [
     new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin("styles.css"),
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.optimize\.css$/g,
+      cssProcessor: require('cssnano'),
+      cssProcessorOptions: { discardComments: { removeAll: true } },
+      canPrint: true
+    }),
+    new CompressionPlugin({
+      algorithm: 'gzip'
+    }),
     new webpack.optimize.CommonsChunkPlugin({
        name: "vendor"
-    })
+    }),
+    new UglifyJsPlugin()
   ],
   module: {
     rules: [
