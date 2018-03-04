@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
-var url
 
 const extractSass = new ExtractTextPlugin({
   filename: "[name].[contenthash].css"

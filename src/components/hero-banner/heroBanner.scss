@@ -55,15 +55,24 @@ $bg-img: url('../../resources/herobackground.png');
     }
 
     &__inner {
-        transition: opacity 1.5s ease, transform 0.5s ease-out, filter 0.5s ease, -webkit-filter 0.5s ease;
-        padding: 0 !important;
-        position: relative;
-        z-index: 2;
+        padding: 4em 0 2em 0;
+        margin: 0 auto;
+        max-width: 65em;
+        width: calc(100% - 6em);
+        z-index: 7;
     }
 
     &__title {
         margin: auto;
         font-size: 2em;
+            &:after {
+                content: '';
+                background-color: #ffffff;
+                display: block;
+                height: 2px;
+                margin: 0.325em 0 0.5em 0;
+                width: 100%;
+            }
     }
 }
 

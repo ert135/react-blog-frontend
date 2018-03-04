@@ -12,18 +12,8 @@
   "author": "Robert Smith",
   "license": "MIT",
   "dependencies": {
-    "@types/material-ui": "^0.18.4",
-    "@types/react": "^16.0.25",
-    "@types/react-dom": "^16.0.3",
-    "@types/react-redux": "^5.0.13",
-    "@types/react-router": "^4.0.19",
-    "@types/react-router-dom": "^4.2.3",
-    "@types/react-router-redux": "^5.0.10",
-    "axios": "^0.17.1",
     "babel-polyfill": "6.8.0",
     "express-static-gzip": "^0.3.0",
-    "jquery": "2.2.3",
-    "material-ui": "^0.19.4",
     "react": "15.6.2",
     "react-dom": "15.6.2",
     "react-redux": "5.0.6",
@@ -32,10 +22,17 @@
     "react-router-redux": "4.0.8",
     "redux": "3.7.2",
     "redux-thunk": "2.0.1",
-    "toastr": "2.1.2",
-    "typescript": "^2.6.1"
+    "typescript": "^2.6.1",
+    "victor": "^1.1.0"
   },
   "devDependencies": {
+    "@types/material-ui": "^0.18.4",
+    "@types/react": "^16.0.25",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "^5.0.13",
+    "@types/react-router": "^4.0.19",
+    "@types/react-router-dom": "^4.2.3",
+    "@types/react-router-redux": "^5.0.10",
     "awesome-typescript-loader": "^3.4.0",
     "babel-cli": "6.8.0",
     "babel-core": "6.8.0",
@@ -79,7 +76,6 @@
     "webpack-hot-middleware": "2.10.0"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/coryhouse/pluralsight-redux-starter"
+    "type": "git"
   }
 }

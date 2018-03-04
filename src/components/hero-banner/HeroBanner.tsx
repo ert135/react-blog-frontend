@@ -18,8 +18,8 @@ export default class HeroBanner extends React.Component<any, any> {
         return (
             <section className="banner">
                 <div className="banner__inner">
-                    <header className="banner__header">
-                        <h1>Robert Smith</h1>
+                    <header className="banner__title">
+                        <h1 className='banner__title'>Robert Smith</h1>
                     </header>
                     <div className="banner__content">
                         <p>
@@ -31,7 +31,7 @@ export default class HeroBanner extends React.Component<any, any> {
                                     href="#one" 
                                     className="button next scrolly"
                                 >
-                                Get Started
+                                Github
                                 </a>
                             </li>
                         </ul>
