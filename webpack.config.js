@@ -13,7 +13,6 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   entry: {
      app: path.resolve(__dirname, 'src/index.tsx'),
-     vendor: path.resolve(__dirname, 'src/vendor.ts')
   },
   target: 'web',
   output: {
@@ -44,14 +43,21 @@ module.exports = {
     new CompressionPlugin({
       algorithm: 'gzip'
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-       name: "vendor"
-    }),
     new UglifyJsPlugin()
   ],
   module: {
     rules: [
       {test: /\.tsx?$/, exclude: /node_modules/, loader: "awesome-typescript-loader"},
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ["es2015", "react"]
+          }
+        }
+      },
       {enforce: "pre", test: /\.js$/, loader: "source-map-loader"},
       {
         test: /\.scss$/,

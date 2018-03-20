@@ -1,6 +1,6 @@
 import * as React from 'react';
 import config from '../../../config/config';
-import HeroBanner from '../hero-banner/HeroBanner'
+import HeroBanner from '../hero-banner/HeroBanner';
 
 import {
     BrowserRouter as Router,
@@ -41,10 +41,6 @@ export default class MainPage extends React.Component<any, any> {
     }
 
     public render() {
-        return (
-            <div>
-                <HeroBanner></HeroBanner>
-            </div>
-        );
+        return <HeroBanner></HeroBanner>;
     }
 }

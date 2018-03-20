@@ -9,6 +9,14 @@ $bg-img: url('../../resources/herobackground.png');
     }
 }
 
+#animated-background-canvas {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    top: 3.25em;
+    z-index: 5000;
+}
+
 .banner {
     align-items: center;
     display: flex;

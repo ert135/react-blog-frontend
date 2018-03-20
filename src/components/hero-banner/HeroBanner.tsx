@@ -1,5 +1,6 @@
 import * as React from 'react';
 import config from '../../../config/config';
+import * as backgroundAnimation from '../../resources/backgroundanimation';
 
 import {
     BrowserRouter as Router,
@@ -12,14 +13,17 @@ import './heroBanner.scss';
 export default class HeroBanner extends React.Component<any, any> {
     constructor(props: any) {
         super(props);
+
+        console.log('backgroudn animation is ', backgroundAnimation);
     }
 
     public render() {
         return (
             <section className="banner">
+                <div id="animated-background-canvas"></div>
                 <div className="banner__inner">
                     <header className="banner__title">
-                        <h1 className='banner__title'>Robert Smith</h1>
+                        Robert Smith
                     </header>
                     <div className="banner__content">
                         <p>
@@ -32,6 +36,14 @@ export default class HeroBanner extends React.Component<any, any> {
                                     className="button next scrolly"
                                 >
                                 Github
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="#one" 
+                                    className="button next scrolly"
+                                >
+                                Linkedin
                                 </a>
                             </li>
                         </ul>
