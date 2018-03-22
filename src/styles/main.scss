@@ -16,6 +16,12 @@ body {
   padding-top: 3.25em;
 }
 
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 0;
+}
+
 .testTitle {
   color: white;
 }

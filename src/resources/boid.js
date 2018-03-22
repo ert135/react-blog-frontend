@@ -17,14 +17,10 @@ export default class boid {
         this.canvasHeight = initialCanvasHeight;
         this.maxforce = 0.05;
     }
-
-    getForceSum() {
-
-    }
-
+    
     update() {
         this.velocity.add(this.acceleration);
-        this.velocity.limit(2);
+        this.velocity.limit(1);
         this.position.add(this.velocity);
         this.acceleration.mult(0);
         this.checkEdges();
@@ -37,10 +33,6 @@ export default class boid {
 
     applyForce(force) {
         this.acceleration.add(force);
-    }
-
-    wander() {
-
     }
 
     getRandomArbitrary(min, max) {

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import config from '../../../config/config';
 import HeroBanner from '../hero-banner/HeroBanner';
+import PostCard from '../post-card/PostCard';
 
 import {
     BrowserRouter as Router,
@@ -26,21 +27,29 @@ export default class MainPage extends React.Component<any, any> {
                 this.setState({
                     posts: response.posts
                 });
-            })
+            });
+    }
+
+    private onClickPost(id): void {
+        console.log('Clicked post with an ID of ', id);
     }
 
     private renderPosts() {
         if (this.state.posts) {
             return this.state.posts.map((post: any, i: number) => {
-               return <h2 className="testTitle" key={i}>
-                    {/* { post.title } */}
-                    {/* <Link to="/posts">{post.title}</Link> */}
-               </h2>
+                return <PostCard key={i} onClick={this.onClickPost.bind(this)} post={post}></PostCard>
             });
         }
     }
 
     public render() {
-        return <HeroBanner></HeroBanner>;
+        return (
+            <div>
+                <HeroBanner></HeroBanner>
+                <section id='posts' className='tiles'>
+                    {this.renderPosts()}
+                </section>
+            </div>
+        )
     }
 }

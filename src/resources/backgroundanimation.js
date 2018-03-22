@@ -5,8 +5,12 @@ const p5Wrapper = function( sketch ) {
     let boids = [];
 
     sketch.setup = function() {
-        sketch.createCanvas(canvasWidth, 800);
-        for(var i = 0; i < 200; i++) { 
+        if(window.innerWidth < 736) {
+            sketch.createCanvas(canvasWidth, 400);
+        } else {
+            sketch.createCanvas(canvasWidth, 775);
+        }
+        for(var i = 0; i < 100; i++) { 
             boids.push(new boid(new p5.Vector(Math.floor(Math.random() * canvasWidth-1), Math.floor(Math.random() * 799)), sketch, canvasWidth, 800));
         }
     };
@@ -23,10 +27,17 @@ const p5Wrapper = function( sketch ) {
     
     sketch.windowResized = function() {
         canvasWidth = window.innerWidth;
-        sketch.resizeCanvas(canvasWidth, 500);
-        boids.forEach(boid => {
-            boid.updateEdges(canvasWidth, 500);
-        });
+        if(window.innerWidth <= 736) {
+            sketch.resizeCanvas(canvasWidth, 400);
+            boids.forEach(boid => {
+                boid.updateEdges(canvasWidth, 400);
+            });
+        } else {
+            sketch.resizeCanvas(canvasWidth, 775);
+            boids.forEach(boid => {
+                boid.updateEdges(canvasWidth, 775);
+            });
+        }
     };
 };
   
