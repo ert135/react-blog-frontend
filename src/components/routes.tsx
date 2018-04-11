@@ -6,8 +6,8 @@ import PostDetail from './post-detail/PostDetail'
 const Routes = () => (
     <main>
         <Switch>
-            <Route exact path='/' component={MainPage}/>
-            <Route path='/posts' component={PostDetail}/>
+            <Route exact path="/" component={MainPage}/>
+            <Route exact path="/posts/:id" component={PostDetail}/>
         </Switch>
     </main>
 )

@@ -17,6 +17,10 @@ export default class HeroBanner extends React.Component<any, any> {
         console.log('backgroudn animation is ', backgroundAnimation);
     }
 
+    public componentDidMount() {
+        console.log('backgroudn animation jghfjghfis ', backgroundAnimation);
+    }
+
     public render() {
         return (
             <section className="banner">
@@ -33,7 +37,7 @@ export default class HeroBanner extends React.Component<any, any> {
                             <li>
                                 <a 
                                     href="#one" 
-                                    className="button next scrolly"
+                                    className="icon alt fa-github"
                                 >
                                 Github
                                 </a>
@@ -41,7 +45,7 @@ export default class HeroBanner extends React.Component<any, any> {
                             <li>
                                 <a 
                                     href="#one" 
-                                    className="button next scrolly"
+                                    className="icon alt fa-linkedin"
                                 >
                                 Linkedin
                                 </a>
