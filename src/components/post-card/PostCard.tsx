@@ -21,10 +21,10 @@ export default class PostCard extends React.Component<any, any> {
 
     public render() {
         return (
-            <Link to={`/posts/${this.props.post.id}`}>
-                <article
-                    onClick={this.onClick.bind(this)}
-                >
+            <article
+                onClick={this.onClick.bind(this)}
+            >
+                <Link to={`/posts/${this.props.post.id}`}>
                     <span className="image">
                         <img src={this.state.post.pictureUrl}></img>
                     </span>
@@ -36,9 +36,9 @@ export default class PostCard extends React.Component<any, any> {
                         </h3>
                         <p>{this.state.post.subtitle}</p>
                     </header>
-                <a className="link primary"></a>
-                </article>
-            </Link>
+                    <a className="link primary"></a>
+                </Link>
+            </article>
         )
     }
 }
