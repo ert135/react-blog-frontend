@@ -8,10 +8,16 @@ import {
 import './postCard.scss';
 
 export default class PostCard extends React.Component<any, any> {
+    private divStyle: any;
+
     constructor(props: any) {
         super(props);
         this.state = {
             post: this.props.post
+        };
+
+        this.divStyle = {
+            backgroundImage: 'url(' + 'http://i32.photobucket.com/albums/d34/robert_smith47/astar_zpsx4vrkozp.png' + ')'
         };
     }
 
@@ -23,6 +29,7 @@ export default class PostCard extends React.Component<any, any> {
         return (
             <article
                 onClick={this.onClick.bind(this)}
+                style={this.divStyle}
             >
                 <Link to={`/posts/${this.props.post.id}`}>
                     <span className="image">
