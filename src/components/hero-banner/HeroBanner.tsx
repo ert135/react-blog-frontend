@@ -1,6 +1,7 @@
 import * as React from 'react';
 import config from '../../../config/config';
 import * as backgroundAnimation from '../../resources/backgroundanimation';
+import 'p5'
 
 import {
     BrowserRouter as Router,
@@ -18,7 +19,8 @@ export default class HeroBanner extends React.Component<any, any> {
     }
 
     public componentDidMount() {
-        console.log('backgroudn animation jghfjghfis ', backgroundAnimation);
+        let background = document.getElementById('animated-background-canvas')
+        new p5(backgroundAnimation.p5Wrapper, background);
     }
 
     public render() {

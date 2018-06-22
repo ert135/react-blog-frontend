@@ -1,6 +1,6 @@
 import boid from './boid';
 
-const p5Wrapper = function( sketch ) {
+export const p5Wrapper = function( sketch ) {
     let canvasWidth = window.innerWidth;
     let boids = [];
 

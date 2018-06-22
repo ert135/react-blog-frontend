@@ -25,7 +25,6 @@ export default class App extends React.Component<any, any> {
 
     private getTokenFromLocalStorage(): void {
         console.log('getting token from local storage');
-        //load token from local stroage
     }
 
     private onClickNav(): void {
