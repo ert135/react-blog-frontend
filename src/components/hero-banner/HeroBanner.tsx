@@ -1,25 +1,15 @@
 import * as React from 'react';
-import config from '../../../config/config';
 import * as backgroundAnimation from '../../resources/backgroundanimation';
-import 'p5'
-
-import {
-    BrowserRouter as Router,
-    Route,
-    Link
-  } from 'react-router-dom'
-
 import './heroBanner.scss';
+declare const p5: any;
 
 export default class HeroBanner extends React.Component<any, any> {
     constructor(props: any) {
         super(props);
-
-        console.log('backgroudn animation is ', backgroundAnimation);
     }
 
     public componentDidMount() {
-        let background = document.getElementById('animated-background-canvas')
+        let background = document.getElementById('animated-background-canvas');
         new p5(backgroundAnimation.p5Wrapper, background);
     }
 
@@ -32,25 +22,12 @@ export default class HeroBanner extends React.Component<any, any> {
                         Robert Smith
                     </header>
                     <div className="banner__content">
-                        <p>
-                            Software Engineer
-                        </p>
                         <ul className="banner__actions">
                             <li>
-                                <a 
-                                    href="#one" 
-                                    className="icon alt fa-github"
-                                >
-                                Github
-                                </a>
+                                <i className="banner__icon fab fa-linkedin"></i>
                             </li>
                             <li>
-                                <a 
-                                    href="#one" 
-                                    className="icon alt fa-linkedin"
-                                >
-                                Linkedin
-                                </a>
+                                <i className="banner__icon fab fa-github"></i>
                             </li>
                         </ul>
                     </div>

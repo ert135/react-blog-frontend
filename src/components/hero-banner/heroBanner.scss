@@ -70,16 +70,26 @@ $bg-img: url('../../resources/herobackground.png');
         z-index: 7;
     }
 
+    &__icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+
+    &__actions {
+        display: flex;
+    }
+
     &__title {
         margin: auto;
-        font-size: 2em;
+        font-size: 4em;
             &:after {
-                content: '';
-                background-color: #ffffff;
-                display: block;
-                height: 2px;
-                margin: 0.325em 0 0.5em 0;
-                width: 100%;
+                // content: '';
+                // background-color: #ffffff;
+                // display: block;
+                // height: 2px;
+                // margin: 0.325em 0 0.5em 0;
+                // width: 100%;
             }
     }
 }

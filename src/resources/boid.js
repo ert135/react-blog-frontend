@@ -2,7 +2,7 @@ export default class boid {
     constructor(
         initialPosition,
         p5ref,
-        initialCanvasWidth, 
+        initialCanvasWidth,
         initialCanvasHeight
     ) {
         this.initialPosition = initialPosition;
@@ -17,7 +17,7 @@ export default class boid {
         this.canvasHeight = initialCanvasHeight;
         this.maxforce = 0.05;
     }
-    
+
     update() {
         this.velocity.add(this.acceleration);
         this.velocity.limit(1);
@@ -45,19 +45,19 @@ export default class boid {
     }
 
     checkEdges() {
-        if(this.position.x > this.canvasWidth) {
+        if (this.position.x > this.canvasWidth) {
             this.position.x = 0;
         }
 
-        if(this.position.y > this.canvasHeight) {
+        if (this.position.y > this.canvasHeight) {
             this.position.y = 0;
         }
 
-        if(this.position.y < 0) {
+        if (this.position.y < 0) {
             this.position.y = this.canvasHeight;
         }
 
-        if(this.position.x < 0) {
+        if (this.position.x < 0) {
             this.position.x = this.canvasWidth;
         }
     }
@@ -66,7 +66,7 @@ export default class boid {
         let mouseVector = new p5.Vector(this.sketch.mouseX, this.sketch.mouseY);
         let distanceVector = p5.Vector.sub(mouseVector, this.position);
         let distanceScalar = distanceVector.mag();
-        if(distanceScalar < 300) {
+        if (distanceScalar < 300) {
             this.buildSteeringForce(mouseVector, distanceVector);
         }
     }
@@ -74,7 +74,6 @@ export default class boid {
     buildSteeringForce(mouseVector, distanceVector) {
         let desired = distanceVector.copy().mult(-1);
         let steer = p5.Vector.sub(desired, this.velocity);
-        
         steer.limit(this.maxforce);
         this.applyForce(steer);
     }

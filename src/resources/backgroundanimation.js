@@ -5,12 +5,12 @@ export const p5Wrapper = function( sketch ) {
     let boids = [];
 
     sketch.setup = function() {
-        if(window.innerWidth < 736) {
+        if (window.innerWidth < 736) {
             sketch.createCanvas(canvasWidth, 400);
         } else {
             sketch.createCanvas(canvasWidth, 775);
         }
-        for(var i = 0; i < 100; i++) { 
+        for (var i = 0; i < 100; i++) {
             boids.push(new boid(new p5.Vector(Math.floor(Math.random() * canvasWidth-1), Math.floor(Math.random() * 799)), sketch, canvasWidth, 800));
         }
     };
@@ -24,7 +24,7 @@ export const p5Wrapper = function( sketch ) {
             boid.draw();
         });
     };
-    
+
     sketch.windowResized = function() {
         canvasWidth = window.innerWidth;
         if(window.innerWidth <= 736) {
@@ -40,5 +40,5 @@ export const p5Wrapper = function( sketch ) {
         }
     };
 };
-  
+
 export default new p5(p5Wrapper, 'animated-background-canvas');

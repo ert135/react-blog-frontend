@@ -35,7 +35,7 @@ export default class PostCard extends React.Component<any, any> {
                     <span className="image">
                         <img src={this.state.post.pictureUrl}></img>
                     </span>
-                    <header 
+                    <header
                         className="major"
                     >
                         <h3>
