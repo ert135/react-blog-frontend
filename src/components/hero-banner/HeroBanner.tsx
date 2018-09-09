@@ -9,6 +9,7 @@ export default class HeroBanner extends React.Component<any, any> {
     }
 
     public componentDidMount() {
+        console.log('called here');
         let background = document.getElementById('animated-background-canvas');
         new p5(backgroundAnimation.p5Wrapper, background);
     }
@@ -19,15 +20,23 @@ export default class HeroBanner extends React.Component<any, any> {
                 <div id="animated-background-canvas"></div>
                 <div className="banner__inner">
                     <header className="banner__title">
-                        Robert Smith
+                        <h1>Robert Smith</h1>
+                        <p className='banner__subtitle'>Software Engineer</p>
                     </header>
                     <div className="banner__content">
                         <ul className="banner__actions">
                             <li>
-                                <i className="banner__icon fab fa-linkedin"></i>
+                                <a 
+                                    className="banner__icon fab fa-linkedin"
+                                    href='https://www.linkedin.com/in/robert-smith-832b7a52/'
+                                ></a>
                             </li>
                             <li>
-                                <i className="banner__icon fab fa-github"></i>
+                                <a 
+                                    className="banner__icon fab fa-github"
+                                    href='https://github.com/ert135'
+                                >
+                                </a>
                             </li>
                         </ul>
                     </div>

@@ -12,12 +12,7 @@ export default class Header extends React.Component<any, any> {
     public render() {
         return (
             <header className="header reveal alt">
-                <a href="index.html" className="header__logo">
-
-                </a>
-                <nav className='header__nav'>
-                    <a href="#menu"></a>
-                </nav>
+                <a href="index.html" className="header__logo"></a>
             </header>
         );
     }

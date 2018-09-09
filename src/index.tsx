@@ -13,8 +13,6 @@ import App from './components/app';
 
 import './styles/main.scss';
 
-console.log('Reducers are ', reducers);
-
 const store = createStore(reducers, { navOpen: false, posts: [] });
 
 console.log('store is ', store.getState());
